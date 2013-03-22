@@ -16,7 +16,8 @@
     margin-left: 3px !important;
 }
 
-.dynamic-menu-root li:hover
+.dynamic-menu-root li:hover,
+.menu-item-li.dynamic-menu-selected
 {
     background-color: #05B7C0;
     color: #FFFFFF;
@@ -57,7 +58,9 @@
 }
 
 .menu-item-li:hover a:link,
-.menu-item-li:hover a
+.menu-item-li:hover a,
+.menu-item-li.dynamic-menu-selected a:link,
+.menu-item-li.dynamic-menu-selected a
 {
     color: #ffffff;    
 }

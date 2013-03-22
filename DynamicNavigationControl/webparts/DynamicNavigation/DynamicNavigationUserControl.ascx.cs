@@ -6,6 +6,8 @@ using System.Web.UI.HtmlControls;
 using Microsoft.SharePoint;
 using DynamicNavigationControl.Data;
 using System.Collections.Generic;
+using System.Text;
+using System.IO;
 
 
 namespace DynamicNavigationControl.webparts.DynamicNavigation
@@ -18,6 +20,8 @@ namespace DynamicNavigationControl.webparts.DynamicNavigation
         int tmpInvertNavigationCounter= 0;
 
         List<DynamicItemNavigation> DynamicResult;
+
+        string currentPage = string.Empty;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -33,7 +37,7 @@ namespace DynamicNavigationControl.webparts.DynamicNavigation
 
         private void getInformationData()
         {
-
+            currentPage = this.Page.Request.Url.AbsoluteUri;
             NavigationData ND = new NavigationData(SPContext.Current.Site.ID, SPContext.Current.Web.ID, this.NavigationList);
             DynamicResult = ND.GetDynamicNavigationInformation();
             if (DynamicResult.Count > 0)
@@ -68,8 +72,10 @@ namespace DynamicNavigationControl.webparts.DynamicNavigation
         private void AddItemInDynamicMenu(DynamicItemNavigation item, List<DynamicItemNavigation> submenu)
         {
             HtmlGenericControl newLi = new HtmlGenericControl("li");
-            newLi.Attributes["class"] = "menu-item-li";
-            
+            if(item.PageLink.ToLower().Equals(currentPage.ToLower()))
+                newLi.Attributes["class"] = "menu-item-li dynamic-menu-selected";
+            else
+                newLi.Attributes["class"] = "menu-item-li";
             HtmlGenericControl a = new HtmlGenericControl("a");
             a.InnerText = item.PageName;
             if (isValidforUser(item.SharePointGroup))
@@ -85,7 +91,17 @@ namespace DynamicNavigationControl.webparts.DynamicNavigation
                 //tmpInvertNavigationCounter = 0;
                 CreateSubMenu(submenu, newLi);
             }
+            HtmlGenericControl ttcc = newLi;
+            StringBuilder sb = new StringBuilder();
+            StringWriter tw = new StringWriter(sb);
+            HtmlTextWriter hw = new HtmlTextWriter(tw);
 
+            ttcc.RenderControl(hw);
+            if (!string.IsNullOrEmpty(sb.ToString()))
+            {
+                if (sb.ToString().Contains("dynamic-menu-selected") && !newLi.Attributes["class"].Contains("dynamic-menu-selected"))
+                    newLi.Attributes["class"] += " dynamic-menu-selected";
+            }
             DynamicMenuRoot.Controls.Add(newLi); 
         }
 
@@ -99,7 +115,14 @@ namespace DynamicNavigationControl.webparts.DynamicNavigation
                 foreach (DynamicItemNavigation DN in submenu)
                 {
                     HtmlGenericControl subLi = new HtmlGenericControl("li");
-                    subLi.Attributes["class"] = "sub-menu-item-li";
+                    if (DN.PageLink.ToLower().Equals(currentPage.ToLower()))
+                    {
+                        subLi.Attributes["class"] = "sub-menu-item-li dynamic-menu-selected";                        
+                    }
+                    else
+                    {
+                        subLi.Attributes["class"] = "sub-menu-item-li";
+                    }
                     HtmlGenericControl suba = new HtmlGenericControl("a");
                     suba.InnerText = DN.PageName;
                     if (isValidforUser(DN.SharePointGroup))
