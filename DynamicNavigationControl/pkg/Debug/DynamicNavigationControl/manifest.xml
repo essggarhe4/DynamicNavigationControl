@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="44ecda92-3773-4c79-a712-56a1df2ba317" SharePointProductVersion="14.0">
+  <Assemblies>
+    <Assembly Location="DynamicNavigationControl.dll" DeploymentTarget="GlobalAssemblyCache">
+      <SafeControls>
+        <SafeControl Assembly="DynamicNavigationControl, Version=1.0.0.0, Culture=neutral, PublicKeyToken=569641913c79d881" Namespace="DynamicNavigationControl.webparts.DynamicNavigation" TypeName="*" />
+      </SafeControls>
+    </Assembly>
+  </Assemblies>
+  <TemplateFiles>
+    <TemplateFile Location="CONTROLTEMPLATES\DynamicNavigationControl.webparts\DynamicNavigation\DynamicNavigationUserControl.ascx" />
+    <TemplateFile Location="Layouts\DynamicNavigationControl\css\DynamicNavigationControl.css" />
+  </TemplateFiles>
+  <FeatureManifests>
+    <FeatureManifest Location="DynamicNavigationControl_DNC\Feature.xml" />
+  </FeatureManifests>
+</Solution>

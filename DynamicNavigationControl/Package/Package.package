@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="44ecda92-3773-4c79-a712-56a1df2ba317" solutionId="44ecda92-3773-4c79-a712-56a1df2ba317" resetWebServer="false" name="DynamicNavigationControl" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="595f618f-89c3-49b3-a707-bf84515ca00a" />
+  </features>
+  <projectItems>
+    <projectItemReference itemId="8d76d891-a4f9-4d1b-a8c5-5a38c27dded5" />
+  </projectItems>
+</package>

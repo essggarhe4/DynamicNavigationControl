@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Title="Dynamic Navigation Control" Description="Install the dynamic navigation control" Id="47840488-204d-4056-b4e0-4edc1c57a9c3" Scope="Site">
+  <ElementManifests>
+    <ElementManifest Location="DynamicNavigation\Elements.xml" />
+    <ElementFile Location="DynamicNavigation\DynamicNavigation.webpart" />
+  </ElementManifests>
+</Feature>

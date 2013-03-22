@@ -1,0 +1,6 @@
+c:\users\administrator.ad2008r2\documents\visual studio 2010\Projects\DynamicNavigationControl\DynamicNavigationControl\bin\Debug\DynamicNavigationControl.dll
+c:\users\administrator.ad2008r2\documents\visual studio 2010\Projects\DynamicNavigationControl\DynamicNavigationControl\bin\Debug\DynamicNavigationControl.pdb
+c:\users\administrator.ad2008r2\documents\visual studio 2010\Projects\DynamicNavigationControl\DynamicNavigationControl\bin\Debug\Microsoft.Sharepoint.Sandbox.dll
+c:\users\administrator.ad2008r2\documents\visual studio 2010\Projects\DynamicNavigationControl\DynamicNavigationControl\obj\Debug\ResolveAssemblyReference.cache
+c:\users\administrator.ad2008r2\documents\visual studio 2010\Projects\DynamicNavigationControl\DynamicNavigationControl\obj\Debug\DynamicNavigationControl.dll
+c:\users\administrator.ad2008r2\documents\visual studio 2010\Projects\DynamicNavigationControl\DynamicNavigationControl\obj\Debug\DynamicNavigationControl.pdb

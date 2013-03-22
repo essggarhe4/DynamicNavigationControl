@@ -1,0 +1,134 @@
+﻿.dynamic-menu-root
+{
+    margin: 0;
+    padding: 0;
+}
+
+.dynamic-menu-root li
+{
+    float: left;
+    list-style: noone outside none !important;
+    margin: 0 0 0 -1px !important;
+    padding: 0 !important;
+    position: relative;
+    display: inline-block !important;
+    background: none repeat scroll 0 0 #ffffff;
+    margin-left: 3px !important;
+}
+
+.dynamic-menu-root li:hover
+{
+    background-color: #05B7C0;
+    color: #FFFFFF;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.dynamic-menu-root li a,
+.dynamic-menu-root li a:link
+{
+    width: 59px;
+    height: 27px;
+    color: #5A5A5A;
+    display: block;
+    font-size: 13px;
+    padding: 46px 25px 0 24px;
+    text-decoration: none;
+    text-transform: lowercase;
+    list-style: none outside none !important;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-align: center;    
+    font-weight: bold;
+}
+
+.menu-item-li
+{
+}
+
+.menu-item-li:hover
+{
+    background-color: #05B7C0;
+}
+
+
+.menu-item-li a:link,
+.menu-item-li a
+{
+    color: #5A5A5A;    
+}
+
+.menu-item-li:hover a:link,
+.menu-item-li:hover a
+{
+    color: #ffffff;    
+}
+
+.menu-item-li:hover > ul
+{
+    display: block !important;       
+}
+.sub-menu-item-ul
+{
+    display: none !important;
+    background-color: #05B7C0;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+    display: block;
+    left: 0;
+    padding: 5px 0 !important;
+    position: absolute;
+    top: 70px;
+    width: 200px;
+    z-index: 9999;
+    padding-left: 1px !important;
+}
+li.sub-menu-item-li
+{
+    background: none repeat scroll 0 0 transparent;
+    float: none;
+    font-size: 1em;
+    margin: 0 !important;
+    padding: 0 !important;
+    margin-left: 3px !important;
+    list-style: none outside none !important;
+    margin: 0 0 0 -1px !important;
+    padding: 0 !important;
+    position: relative;
+    width: 100%;
+}
+
+.sub-menu-item-li > .sub-menu-item-ul
+{
+    top:auto;
+    position: inherit !important;
+}
+
+li.sub-menu-item-li:hover,
+li.sub-menu-item-li:hover > a,
+li.sub-menu-item-li:hover > a:link
+{
+    background-color: #ffffff;
+    color: #05B7C0;
+}
+
+li.sub-menu-item-li a,
+li.sub-menu-item-li a:link
+{
+    clear: both;
+    height: 27px;
+    background-color: #05B7C0;
+    color: #FFFFFF;
+    box-shadow: 0 0 0 #000000;
+    height: auto !important;
+    letter-spacing: 0.03em;
+    padding: 7px 24px;
+    display: block;
+    font-size: 1em;
+    text-decoration: none;
+    text-transform: lowercase;
+    width: auto;
+    text-align: left;
+}
+
+.sub-menu-item-li:hover > ul
+{
+    display: block !important;
+}
