@@ -100,8 +100,9 @@ li.sub-menu-item-li
 
 .sub-menu-item-li > .sub-menu-item-ul
 {
-    top:auto;
-    position: inherit !important;
+    top: 0px;
+    position: absolute !important;
+    left: 200px;
 }
 
 li.sub-menu-item-li:hover,
