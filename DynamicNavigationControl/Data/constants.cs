@@ -14,7 +14,7 @@ namespace DynamicNavigationControl.Data
                 public const string Brand = "Brand";
                 public const string PageName = "Page Name";
                 public const string PageLink = "Page Link";
-                public const string Order = "Order";
+                public const string Order = "Order0";
                 public const string Depth = "Depth";
                 public const string SharePointGroup = "SharePoint Group";
                 public const string Show = "Show";

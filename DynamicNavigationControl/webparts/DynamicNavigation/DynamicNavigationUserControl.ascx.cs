@@ -47,6 +47,7 @@ namespace DynamicNavigationControl.webparts.DynamicNavigation
 
                 if (isValidRoot(RootMenu))
                 {
+                    RootMenu.Sort((x, y) => x.Order.CompareTo(y.Order));
                     foreach (DynamicItemNavigation Ditem in RootMenu)
                     {
                         List<DynamicItemNavigation> submenu = DynamicResult.FindAll(s => s.Depth == Ditem.ID.ToString());
@@ -133,6 +134,7 @@ namespace DynamicNavigationControl.webparts.DynamicNavigation
 
                     //here
                     List<DynamicItemNavigation> invert = DynamicResult.FindAll(s => s.Depth == DN.ID.ToString());
+                    invert.Sort((x, y) => x.Order.CompareTo(y.Order));
                     CreateSubMenu(invert, subLi);
                     //if ((tmpInvertNavigationCounter + 1) < tmpInvertNavigation.Count)
                     //{
